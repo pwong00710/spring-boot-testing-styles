@@ -1,0 +1,1 @@
+java -jar target/mvc-tests-1.0-SNAPSHOT.jar
