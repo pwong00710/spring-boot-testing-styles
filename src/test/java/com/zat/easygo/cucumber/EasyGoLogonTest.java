@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/com/zat/easyGo.logon.feature",
         plugin = {"pretty", "html:target/cucumber/easy_go/logon/html", "json:target/cucumber/easy_go/logon/json/easy_go.json" },
-        glue = {"com.zat.easygo.cucumber.step.logon", "com.zat.easygo.cucumber.step.common"})
+        glue = {"com.zat.easygo.cucumber.step.logon", "com.zat.easygo.cucumber.step.common"},
+        tags = {"not @Ignore"})
 public class EasyGoLogonTest {
 }

@@ -1,4 +1,4 @@
-@logon @subscribe
+@Ignore @logon @subscribe
 Feature: easygo subscribe functionalities
 
   Background: Logon to system

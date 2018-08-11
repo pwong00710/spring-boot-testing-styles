@@ -1,3 +1,4 @@
+#@Ignore
 Feature: Super Hero functionalities
 
   Scenario: Create new super hero

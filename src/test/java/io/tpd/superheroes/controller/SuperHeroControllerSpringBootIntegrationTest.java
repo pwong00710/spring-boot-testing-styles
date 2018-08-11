@@ -3,6 +3,7 @@ package io.tpd.superheroes.controller;
 import io.tpd.superheroes.domain.SuperHero;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
  *
  * @author moises.macero
  */
+@Ignore
 public class SuperHeroControllerSpringBootIntegrationTest {
 
     private TestRestTemplate restTemplate = new TestRestTemplate();
@@ -38,6 +40,7 @@ public class SuperHeroControllerSpringBootIntegrationTest {
         return SERVER_URL + ":" + port + SUPER_HEROS_ENDPOINT;
     }
 
+    @Ignore
     @Test
     public void canRetrieveByIdWhenExists() {
         // when
@@ -48,6 +51,7 @@ public class SuperHeroControllerSpringBootIntegrationTest {
         assertThat(superHeroResponse.getBody().equals(new SuperHero("Rob", "Mannon", "RobotMan")));
     }
 
+    @Ignore
     @Test
     public void canRetrieveByIdWhenDoesNotExist() {
         // when
@@ -58,6 +62,7 @@ public class SuperHeroControllerSpringBootIntegrationTest {
         assertThat(superHeroResponse.getBody()).isNull();
     }
 
+    @Ignore
     @Test
     public void canRetrieveByNameWhenExists() {
         // when
@@ -69,6 +74,7 @@ public class SuperHeroControllerSpringBootIntegrationTest {
         assertThat(superHeroResponse.getBody().equals(new SuperHero("Bruce", "Wayne", "Batman")));
     }
 
+    @Ignore
     @Test
     public void canRetrieveByNameWhenDoesNotExist() {
         // when
@@ -80,6 +86,7 @@ public class SuperHeroControllerSpringBootIntegrationTest {
         assertThat(superHeroResponse.getBody()).isNull();
     }
 
+    @Ignore
     @Test
     public void canCreateANewSuperHero() {
         // when
@@ -90,6 +97,7 @@ public class SuperHeroControllerSpringBootIntegrationTest {
         assertThat(superHeroResponse.getStatusCode()).isEqualTo(HttpStatus.CREATED);
     }
 
+    @Ignore
     @Test
     public void headerIsPresent() throws Exception {
         // when

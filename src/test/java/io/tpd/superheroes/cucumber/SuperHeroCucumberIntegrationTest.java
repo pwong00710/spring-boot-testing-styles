@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/io/tpd/superHero.feature",
         plugin = {"pretty", "html:target/cucumber/super_hero/html", "json:target/cucumber/super_hero/json/super_hero.json" },
-        glue = {"io.tpd.superheroes.cucumber"})
+        glue = {"io.tpd.superheroes.cucumber"},
+        tags = {"not @Ignore"})
 public class SuperHeroCucumberIntegrationTest {
 }

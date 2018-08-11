@@ -1,4 +1,4 @@
-@logon
+@Ignore @logon
 Feature: easygo logon functionalities
 
   Scenario: Success to logon to Club SIM
